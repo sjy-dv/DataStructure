@@ -10,3 +10,6 @@ test-stack:
 
 test-queue:
 	- go test queue_test.go -v -count=1
+
+test-tree:
+	- go test binary_search_tree_test.go -v -count=1
