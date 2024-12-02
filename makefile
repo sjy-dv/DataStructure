@@ -16,3 +16,6 @@ test-tree:
 
 test-hashtable:
 	- go test hashtable_test.go -v -count=1
+
+test-graph:
+	- go test graph_test.go -v -count=1

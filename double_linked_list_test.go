@@ -131,7 +131,7 @@ func (list *DoublyLinkedList) get(index int) *DNode {
 		// pos if 3
 		// find 2
 		// 5(len) - 3(pos)
-		for _ = range list.length - 1 - index {
+		for range list.length - 1 - index {
 			temp = temp.prev
 		}
 		return temp

@@ -148,7 +148,7 @@ func (list *LinkedList) get(index int) *LinkNode {
 	temp := list.head
 	// jump index step using next
 	// node A -> node B -> x index step
-	for _ = range index {
+	for range index {
 		temp = temp.next
 	}
 	return temp
@@ -215,7 +215,7 @@ func (list *LinkedList) reverse() {
 	// tail = 1
 	var after *LinkNode = nil
 	var before *LinkNode = nil
-	for _ = range list.length {
+	for range list.length {
 		// after = 1
 		// after.next = nil
 		after = temp.next
