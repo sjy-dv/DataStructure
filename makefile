@@ -19,3 +19,6 @@ test-hashtable:
 
 test-graph:
 	- go test graph_test.go -v -count=1
+
+test-heap:
+	- go test heap_test.go -v -count=1
