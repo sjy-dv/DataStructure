@@ -13,3 +13,6 @@ test-queue:
 
 test-tree:
 	- go test binary_search_tree_test.go -v -count=1
+
+test-hashtable:
+	- go test hashtable_test.go -v -count=1
