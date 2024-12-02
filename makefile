@@ -7,3 +7,6 @@ test-doubly-linked-list:
 
 test-stack:
 	- go test stack_test.go -v -count=1
+
+test-queue:
+	- go test queue_test.go -v -count=1
