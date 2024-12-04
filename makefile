@@ -22,3 +22,6 @@ test-graph:
 
 test-heap:
 	- go test heap_test.go -v -count=1
+
+test-rbst:
+	- go test recursive_binary_search_tree_test.go -v -count=1
