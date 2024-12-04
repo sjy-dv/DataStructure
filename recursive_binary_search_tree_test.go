@@ -186,11 +186,11 @@ func minSelector(curNode *RTreeNode) int {
 
 func TestRecursiveBinarySearchTree(t *testing.T) {
 	rbst := NewRecursiveBinarySearchTree()
-
+	fmt.Println(rbst.contains(10))
 	rbst.insert(2)
 	rbst.insert(1)
 	rbst.insert(3)
-
+	fmt.Println(rbst.contains(3))
 	fmt.Printf(`
 	      %v
 	     / \
