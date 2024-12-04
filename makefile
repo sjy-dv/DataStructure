@@ -25,3 +25,9 @@ test-heap:
 
 test-rbst:
 	- go test recursive_binary_search_tree_test.go -v -count=1
+
+test-bdfs:
+	- go test bfs_dfs_test.go -v -count=1
+
+test-sort:
+	- go test sort_test.go -v -count=1
