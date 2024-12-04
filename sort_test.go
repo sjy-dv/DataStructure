@@ -75,7 +75,6 @@ func merge(listA, listB []int) []int {
 			j++
 		}
 	}
-	fmt.Println(listA, listB, combined, i, j)
 	for i < len(listA) {
 		combined = append(combined, listA[i])
 		i++
@@ -97,6 +96,35 @@ func mergeSort(list []int) []int {
 	return merge(left, right)
 }
 
+func pivot(list []int, pIndex, eIndex int) int {
+	swapIndex := pIndex
+	for i := pIndex + 1; i < eIndex+1; i++ {
+		if list[i] < list[pIndex] {
+			swapIndex += 1
+			swap(list, swapIndex, i)
+		}
+	}
+	swap(list, pIndex, swapIndex)
+	return swapIndex
+}
+
+func quickSort(list []int) []int {
+	return quickSortHelper(list, 0, len(list)-1)
+}
+
+func quickSortHelper(list []int, left, right int) []int {
+	if left < right {
+		pivotIndex := pivot(list, left, right)
+		quickSortHelper(list, left, pivotIndex-1)
+		quickSortHelper(list, pivotIndex+1, right)
+	}
+	return list
+}
+
+func swap(list []int, a, b int) {
+	list[a], list[b] = list[b], list[a]
+}
+
 func TestBubbleSor(t *testing.T) {
 	testList := []int{15, 74, 241, 643, 1, 3}
 	fmt.Println(bubbleSort(testList))
@@ -115,4 +143,9 @@ func TestInsertionSort(t *testing.T) {
 func TestMergeSort(t *testing.T) {
 	testList := []int{15, 74, 241, 643, 1, 3}
 	fmt.Println(mergeSort(testList))
+}
+
+func TestQuickSort(t *testing.T) {
+	testList := []int{15, 74, 241, 643, 1, 3}
+	fmt.Println(quickSort(testList))
 }
