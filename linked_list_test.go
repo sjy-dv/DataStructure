@@ -167,7 +167,7 @@ func (list *LinkedList) set(index int, val any) bool {
 // but insert is more detail, set index new data
 // and next index push one space at a time
 func (list *LinkedList) insert(index int, val any) bool {
-	if list.length-1 == index {
+	if list.length == index {
 		list.append(val)
 		return true
 	} else if index == 0 {

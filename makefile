@@ -31,3 +31,8 @@ test-bdfs:
 
 test-sort:
 	- go test sort_test.go -v -count=1
+
+ctest:
+	- g++ $(FILE).cc -std=c++20 -g -o $(basename $(FILE)).exe
+	- $(FILE).exe
+	- rm -f $(FILE).exe

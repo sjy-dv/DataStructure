@@ -125,7 +125,7 @@ func swap(list []int, a, b int) {
 	list[a], list[b] = list[b], list[a]
 }
 
-func TestBubbleSor(t *testing.T) {
+func TestBubbleSort(t *testing.T) {
 	testList := []int{15, 74, 241, 643, 1, 3}
 	fmt.Println(bubbleSort(testList))
 }
